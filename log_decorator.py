@@ -7,7 +7,7 @@ import textwrap
 __AUTHOR__ = "Oscar Lundberg"
 
 def return_wrapper(prefix):
-    """Create wrapper object
+    """Create text wrapper object
     
     :param prefix(str): Which prefix to use for the indentation
     :returns wrap: Wrapper object, use wrap.fill(text) to wrap text 
@@ -65,4 +65,11 @@ def log_decorator(func):
 
 
 if __name__ == '__main__':
-    pass
+    # For illustration
+    
+    @log_decorator
+    def addition(a, b):
+        return a + b
+    
+    sum_ab = addition(1, 2)
+    print(sum_ab)
