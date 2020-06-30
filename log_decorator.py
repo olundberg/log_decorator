@@ -6,7 +6,6 @@ import textwrap
 
 __AUTHOR__ = "Oscar Lundberg"
 
-
 def return_wrapper(prefix):
     """Create wrapper object
     
