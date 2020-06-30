@@ -6,18 +6,12 @@ import textwrap
 
 __AUTHOR__ = "Oscar Lundberg"
 
-def indent(text, steps):
-    """
-
-    :param text:
-    :param steps:
-    :returns text_w
-    """
-    text_w = textwrap.indent(text, " "*steps)
-    return text_w
 
 def return_wrapper(prefix):
-    """
+    """Create wrapper object
+    
+    :param prefix(str): Which prefix to use for the indentation
+    :returns wrap: Wrapper object, use wrap.fill(text) to wrap text 
     """
     wrap = textwrap.TextWrapper(initial_indent=prefix,
                                 width=90,
@@ -72,23 +66,4 @@ def log_decorator(func):
 
 
 if __name__ == '__main__':
-
-    @log_decorator
-    def add(a,b):
-        """Just to test decorator"""
-        return a + b, a, b
-
-    @log_decorator
-    def test(a):
-
-        @log_decorator
-        def test_2(b):
-            return b
-        b = test_2(a)
-        dict_ = dict()
-        dict_["a"] = 1
-        return dict_
-
-
-    add(3,5)
-    test(1)
+    pass
