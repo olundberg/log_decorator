@@ -5,7 +5,6 @@ from inspect import getfullargspec
 import textwrap
 
 __AUTHOR__ = "Oscar Lundberg"
-__COPYRIGHT__ = "Copyright 2020, Gnothis AB"
 
 def indent(text, steps):
     """
